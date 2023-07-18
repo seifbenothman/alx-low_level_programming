@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * _putchar - Custom function to output a character to stdout.
+ *
  * main - Entry point.
+ *
  * Return: 0 indicate success.
  */
 int _putchar(char c);
