@@ -1,8 +1,11 @@
 #include <stdio.h>
 #include "main.h"
-/* Function prototype */
+/**
+ * _putchar - Custom function to output a character to stdout.
+ * @c: The character to be printed.
+ * Return: The character that was printed.
+ */
 int _putchar(char c);
-
 int main(void)
 {
 	char c[] = "_putchar";
@@ -14,15 +17,3 @@ int main(void)
 		_putchar('\n');
 		return (0);
 }
-
-/**
- ** _putchar - Custom function to output a character to stdout.
- ** @c: The character to be printed.
- **
- ** Return: The character that was printed.
- **/
-int _putchar(char c)
-{
-		return putchar(c);
-}
-
