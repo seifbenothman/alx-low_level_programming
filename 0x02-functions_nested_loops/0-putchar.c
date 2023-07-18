@@ -3,7 +3,7 @@
 /**
  * _putchar - Custom function to output a character to stdout.
  * main - Entry point.
- * Return: The character that was printed.
+ * Return: 0 indicate success.
  */
 int _putchar(char c);
 int main(void)
