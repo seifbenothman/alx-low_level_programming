@@ -2,7 +2,7 @@
 #include "main.h"
 /**
  * _putchar - Custom function to output a character to stdout.
- * @c: The character to be printed.
+ * main - Entry point.
  * Return: The character that was printed.
  */
 int _putchar(char c);
