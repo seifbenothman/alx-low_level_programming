@@ -6,6 +6,8 @@
  * owned by Bwave ICT
  * Return: void
  */
+
+
 void print_numbers(void)
 {
 	int c;
