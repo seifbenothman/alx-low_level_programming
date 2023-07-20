@@ -12,7 +12,7 @@ void print_numbers(void)
 
 	for (c = 0; c < 10; c++)
 	{
-		if (c != 2 && c != 4) // Skip printing 2 and 4
+		if (c != 2 && c != 4)
 		{
 			putchar(c + '0');
 		}
