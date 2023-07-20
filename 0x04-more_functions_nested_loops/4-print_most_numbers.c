@@ -19,4 +19,3 @@ void print_numbers(void)
 	}
 	putchar('\n');
 }
-
