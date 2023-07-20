@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * print_numbers - print 0123456789 excluding 2 and 4
+ * print_most_numbers - print 0123456789 excluding 2 and 4
  * owned by Bwave ICT
  * Return: void
  */
