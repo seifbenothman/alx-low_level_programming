@@ -1,12 +1,12 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- *print_numbers - print 0123456789 excluding 2 and 4
- *owned by Bwave ICT
- *Return: void
+ * print_numbers - print 0123456789 excluding 2 and 4
+ * owned by Bwave ICT
+ * Return: void
  */
-
-void print_most_numbers(void)
+void print_numbers(void)
 {
 	int c;
 
@@ -14,8 +14,9 @@ void print_most_numbers(void)
 	{
 		if (c != 2 && c != 4) // Skip printing 2 and 4
 		{
-		putchar(c + '0');
+			putchar(c + '0');
 		}
 	}
-		putchar('\n');
+	putchar('\n');
 }
+
