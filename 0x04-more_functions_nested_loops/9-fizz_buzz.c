@@ -1,10 +1,14 @@
 #include <stdio.h>
 #include "main.h"
 
-/**
- * main - Entry point of the program
- * owned by Bwave ICT
- * Return: Always 0 (Success)
+/**  
+ * main - Prints numbers from 1 to 100 with special conditions.
+ * For multiples of three, prints "Fizz".
+ * For multiples of five, prints "Buzz".
+ * For multiples of both three and five, prints "FizzBuzz".
+ * Each number or word is separated by a space.
+ *
+ * Return: Always 0
  */
 int main(void)
 {
