@@ -7,12 +7,11 @@
  */
 void print_number(int n)
 {
-	/*Declaring variables*/
 	int count = 0, pow = 1;
 	unsigned int num = n;
 
 
-	if (n < 0) /*Evaluate this condition*/
+	if (n < 0)
 	{
 		_putchar('-');
 		num = -n;
