@@ -5,15 +5,15 @@
  *@s: input string
  *Return: void
  */
-int void _puts_rescursion(char *s);
+void _puts_rescursion(char *s);
 {
 	if (*s)
 	{
-		_my_putchar(*s);
-		_my_puts_recursion(s + 1);
+		_putchar(*s);
+		_puts_recursion(s + 1);
 	}
 	else
 	{
-	_my_putchar('\n');
+	_putchar('\n');
 	}
 }
