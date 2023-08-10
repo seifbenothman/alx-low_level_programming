@@ -14,10 +14,10 @@ void *malloc_checked(unsigned int b)
 
 	if (ptr == NULL)
 	{
-		_putchar('E'); /* Output an error indicator */
+		_putchar('E');
 		_putchar('\n');
 		exit(98);
 	}
 
-	return ptr;
+	return (ptr);
 }
