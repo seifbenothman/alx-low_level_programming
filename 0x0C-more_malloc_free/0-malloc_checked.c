@@ -10,14 +10,9 @@
  */
 void *malloc_checked(unsigned int b)
 {
-	void *ptr = malloc(b);
+	int *ptr = malloc(b);
 
 	if (ptr == NULL)
-	{
-		_putchar('E');
-		_putchar('\n');
 		exit(98);
-	}
-
 	return (ptr);
 }
