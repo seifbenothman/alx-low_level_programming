@@ -1,21 +1,32 @@
+#include "3-calc.h"
+#include <stdlib.h>
 #include <stdio.h>
-#include "function_pointers.h"
 
-void print_elem(int elem)
+/**
+ * main - ...
+ * @argc: ...
+ * @argv: ...
+ *
+ * Return: ...
+ */
+int main(int argc, char *argv[])
 {
-	printf("%d\n", elem);
-}
+	int (*oprt)(int, int);
 
-void print_elem_hex(int elem)
-{
-	printf("0x%x\n", elem);
-}
+	if (argc != 4)
+	{
+		printf("Error\n");
+		exit(98);
+	}
 
-int main(void)
-{
-	int array[5] = {0, 98, 402, 1024, 4096};
+	oprt = get_op_func(argv[2]);
 
-	array_iterator(array, 5, &print_elem);
-	array_iterator(array, 5, &print_elem_hex);
+	if (!oprt)
+	{
+		printf("Error\n");
+		exit(99);
+	}
+
+	printf("%d\n", oprt(atoi(argv[1]), atoi(argv[3])));
 	return (0);
 }
