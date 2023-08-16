@@ -1,32 +1,42 @@
-#include "3-calc.h"
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include "3-calc.h"
 
 /**
- * main - ...
- * @argc: ...
- * @argv: ...
+ * main - Entry point of the program
+ * @argc: Number of command-line arguments
+ * @argv: Array of command-line arguments
  *
- * Return: ...
+ * Return: 0 if successful, otherwise exit status
  */
 int main(int argc, char *argv[])
 {
-	int (*oprt)(int, int);
+	int a, b, result;
+	int (*op_func)(int, int);
 
 	if (argc != 4)
 	{
 		printf("Error\n");
-		exit(98);
+		return (98);
 	}
 
-	oprt = get_op_func(argv[2]);
+	a = atoi(argv[1]);
+	b = atoi(argv[3]);
+	op_func = get_op_func(argv[2]);
 
-	if (!oprt)
+	if (op_func == NULL)
 	{
 		printf("Error\n");
-		exit(99);
+		return (99);
 	}
 
-	printf("%d\n", oprt(atoi(argv[1]), atoi(argv[3])));
+	if ((*argv[2] == '/' || *argv[2] == '%') && b == 0)
+	{
+		printf("Error\n");
+		return (100);
+	}
+
+	result = op_func(a, b);
+	printf("%d\n", result);
 	return (0);
 }
