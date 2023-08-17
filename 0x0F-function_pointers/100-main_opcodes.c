@@ -1,42 +1,49 @@
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
- * print_opcodes - Print the opcodes in hexadecimal format
- * @addr: Address of the memory block to print opcodes from
- * @num_bytes: Number of bytes to print
+ * print_opcodes - print the opcodes of this program
+ * @a: address of the main function
+ * @n: number of bytes to print
+ *
+ * Return: void
  */
-void print_opcodes(unsigned char *addr, int num_bytes)
+void print_opcodes(char *a, int n)
 {
-	for (int i = 0; i < num_bytes; i++)
+	int i;
+
+	for (i = 0; i < n; i++)
 	{
-		printf("%02x", addr[i]);
-		if (i < num_bytes - 1)
-		{
+		printf("%.2hhx", a[i]);
+		if (i < n - 1)
 			printf(" ");
-		}
 	}
 	printf("\n");
+
 }
 
 /**
- * main - Entry point of the program
- * @argc: Number of command line arguments
- * @argv: Array of command line argument strings
- * Return: 0 on success, other values on error
+ * main - prints the opcodes of its own main function
+ * @argc: number of arguments passed to the function
+ * @argv: array of pointers to arguments
+ *
+ * Return: always O
  */
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
+	int n;
+
 	if (argc != 2)
 	{
-		fprintf(stderr, "Error\n");
-		return (1);
+		printf("Error\n");
+		exit(1);
 	}
-
-	int num_bytes = atoi(argv[1]);
-	if (num_bytes <= 0)
+	n = atoi(argv[1]);
+	if (n < 0)
 	{
-		fprintf(stderr, "Error\n");
-		return (2);
+		printf("Error\n");
+		exit(2);
 	}
+	print_opcodes((char *)&main, n);
+	return (0);
 }
