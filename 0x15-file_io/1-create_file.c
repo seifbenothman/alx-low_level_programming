@@ -32,7 +32,8 @@ int create_file(const char *filename, char *text_content)
 		write_result = write(file_descriptor, text_content, text_length);
 	}
 
-	if (write_result == -1 || (text_content != NULL && write_result != text_length))
+	if (write_result == -1 || (text_content != NULL &&
+		write_result != text_length))
 	{
 		close(file_descriptor);
 		return (-1);
