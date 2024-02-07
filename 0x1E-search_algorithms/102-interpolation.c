@@ -12,7 +12,7 @@
  *
  * Description: Prints a value every time it is compared in the array..
  */
-int interpolation_searches(int *array, size_t size, int value)
+int interpolation_search(int *array, size_t size, int value)
 {
 	size_t i, l, r;
 

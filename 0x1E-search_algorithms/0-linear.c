@@ -13,7 +13,7 @@
  * Return: the index of the found value,
  * or -1 if not found
  */
-int linear_searches(int *array, size_t size, int value)
+int linear_search(int *array, size_t size, int value)
 {
 	size_t i = 0;
 
